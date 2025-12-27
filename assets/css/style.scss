@@ -1,7 +1,15 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 /* Dark theme with purple accents */
 body {
