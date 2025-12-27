@@ -1,2 +1,9 @@
 title: My Random Computer Stuff Blog
 description: Security research and random computer stuff
+
+# Disable smart typography to fix table rendering
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
