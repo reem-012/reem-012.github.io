@@ -2,7 +2,6 @@
 layout: home
 ---
 
-# My Random Computer Stuff Blog
 ## Articles
 
 <ul>
