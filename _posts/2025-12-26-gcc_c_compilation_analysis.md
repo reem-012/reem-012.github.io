@@ -228,8 +228,9 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   7 .eh_frame     00000038  0000000000000000  0000000000000000  000000b8  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
-reem@linodedevelopment:~/dfir_roadmap/working/c_week1/hello_world$ 
+reem@linodedevelopment:~/dfir_roadmap/working/c_week1/hello_world$
 ```
+
 | Column | Meaning |
 |--------|---------|
 | Idx | Section index number |
