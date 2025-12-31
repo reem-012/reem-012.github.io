@@ -3,11 +3,9 @@ layout: post
 title: "GCC C Compilation Analysis"
 date: 2025-12-26
 ---
-# GCC Compilation Analysis
+# GCC Compilation Analysis. 
 
-This document will be going over how a program goes from source code to a binary that you can run. All examples are performed on `Ubuntu 24.04.3 LTS`. 
-
-Please Note that there may be errors or incorrect explainations in this document so do not treat this as gospel as I was learning this for fun
+> I'm not a systems engineer—I study this as a hobby. If you spot any errors, feel free to reach out. All examples were done on `Ubuntu 24.04.3 LTS` but should work on other distros and versions of Linux.
 
 ## The Four Stages of Compilation
 
